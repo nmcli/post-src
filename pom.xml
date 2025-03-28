@@ -35,7 +35,13 @@
             </exclusions>
         </dependency>
 
-        <!-- JSTL for JSP -->
+        <!-- Spring Form Taglib 지원 (form:form 등) -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- JSTL (forEach 등 JSP 태그 지원) -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -57,14 +63,14 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- SLF4J API (로깅용) -->
+        <!-- SLF4J API (로깅) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.36</version>
         </dependency>
 
-        <!-- Embedded Tomcat 제거 (JBoss 사용 시 필수) -->
+        <!-- Embedded Tomcat 제거 (JBoss에서 제공하므로 provided) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
